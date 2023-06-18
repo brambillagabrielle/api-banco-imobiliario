@@ -2,7 +2,7 @@ const { getAdicionaisPorPropriedadeDB, addAdicionalDB, updateAdicionalDB,
   deleteAdicionalDB, getAdicionalPorCodigoDB } = require('../useCases/adicionalUseCases');
 
 const getAdicionalPorPropriedade = async (request, response) => {
-  await getAdicionaisPorSalaDB(request.params.codigosala)
+  await getAdicionaisPorPropriedadeDB(request.params.codigopropriedade)
     .then(data => response.status(200).json(data))
     .catch(err => {
       response.status(400).json({

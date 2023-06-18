@@ -24,7 +24,6 @@ function verificaJWT(request, response, next) {
             auth: false,
             message: 'Erro ao autenticar o token'
         });
-        console.log("Usuario: " + JSON.stringify(decoded.usuario));
         // passando o usuario para ser usado na próxima requisição
         request.usuario = decoded.usuario;
         next();
